@@ -104,15 +104,13 @@ public static byte[] utf8encode(int codepoint) {
         return (char) code;
     }
 
-    public static final void printChar(int code) throws Exception {
-         BufferedWriter bw = null;
-        File file = new File("C:\\Users\\Lenovo\\Desktop\\2laboras\\intel2.txt");
-         FileWriter fw = new FileWriter(file);
-         bw = new BufferedWriter(fw);
-          bw.write(getAscii(code));
-         
-
-      //  System.out.printf("%c%n", getAscii(code));
+    public static final void printChar(int code)  {
+       //  BufferedWriter bw = null;
+      //  File file = new File("C:\\Users\\Lenovo\\Desktop\\2laboras\\intel2.txt");
+      //  FileWriter fw = new FileWriter(file);
+       //  bw = new BufferedWriter(fw);
+        //  bw.write(getAscii(code));
+        
     }
  
    
@@ -186,10 +184,9 @@ public static byte[] utf8encode(int codepoint) {
       int c = 0;             
       while((c = br.read()) != -1)         //Read char by Char
       {
-            char character = (char) c;   //converting integer to char
-          
-           printChar(character);
-                       
+            char character = (char) c; //converting integer to char    
+          //  int value = Character.getNumericValue(c); 
+         
              }
              
         

@@ -1,15 +1,8 @@
 package javaapplication13;
 import java.util.Scanner; 
-import java.util.Arrays;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.IntStream;
-import java.util.stream.Collectors;
-import java.nio.charset.Charset;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Formatter;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedWriter;
@@ -118,10 +111,14 @@ public static byte[] utf8encode(int codepoint) {
    
     public static void main (String[] args)  throws Exception
     { 
-         Scanner in = new Scanner(System.in);
+        boolean veikia ;
+     veikia = true;
+       while(veikia == true) {
+        Scanner in = new Scanner(System.in);
         // Display the menu
         System.out.println(" 1.decimal converteris");
         System.out.println(" 2.atkoduoti faila");
+         System.out.println(" 3.iseiti");
         
 
         System.out.println("pasirinkite varianta:");
@@ -177,7 +174,7 @@ public static byte[] utf8encode(int codepoint) {
             System.out.printf("%-7c %-43s U+%04X\t%-12s\tU+%04X%n",
                     codepoint, Character.getName(codepoint), codepoint, encodedHex, decoded);
         }
-            
+          
 	   break;
             case 2:
                 File f=new File("C:\\Users\\Lenovo\\Desktop\\2laboras\\intel.txt");     
@@ -200,9 +197,12 @@ public static byte[] utf8encode(int codepoint) {
       
 
                     break;
+                     case 3: 
+                         veikia=false;
+	   break;
             default: System.out.println("neteisingas pasirinkimas");
         }//end of switch
-       
+       }
     }
 
     
